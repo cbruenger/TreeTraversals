@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Scanner;
 
 public class Practice {
@@ -19,15 +18,23 @@ public class Practice {
 		String preOrder[] = preOrderString.split(" ");
 		String inOrder[] = inOrderString.split(" ");
 		
-		System.out.println("PreOrder: ");
-		for (String i : preOrder) {
-			System.out.println(i);
-		}
+//		System.out.println("PreOrder: ");
+//		for (String i : preOrder) {
+//			System.out.println(i);
+//		}
+//		
+//		System.out.println("InOrder:");
+//		for (String i : inOrder) {
+//			System.out.println(i);
+//		}
 		
-		System.out.println("InOrder:");
-		for (String i : inOrder) {
-			System.out.println(i);
-		}
+		ConstructTree tree = new ConstructTree();
+		int len = inOrder.length;
+		
+		Node<String> root = tree.build(inOrder, preOrder, 0, len-1);
+		
+		System.out.println("InOrder traversal of constructed tree: ");
+		tree.printInorder(root);
 		
 		
 		
