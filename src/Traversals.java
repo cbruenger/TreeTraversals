@@ -2,16 +2,16 @@
 public class Traversals {
 	
 	//Function for printing the inOrder traversal
-	void printInOrder(Node node) {}
+	void printInOrder(Node<String> node) {}
 	
 	//Function for printing the preOrder traversal
-	void printPreOrder(Node node) {}
+	void printPreOrder(Node<String> node) {}
 	
 	//Function for printing the postOrder traversal
-	void printPostOrder(Node node) {}
+	void printPostOrder(Node<String> node) {}
 	
 	//Function for printing the byLevel traversal
-	void printByLevel(Node node) {}
+	void printByLevel(Node<String> node) {}
 
 
 }
