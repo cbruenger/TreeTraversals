@@ -1,4 +1,4 @@
-
+//Node class which contains a generic data type
 public class Node<T> { 
 	
 	T data;
