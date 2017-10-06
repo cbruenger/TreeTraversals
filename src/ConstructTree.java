@@ -42,19 +42,4 @@ public class ConstructTree {
 		return i;
 	}
 	
-	//A function to print the inOrder traversal of the tree
-	void printInorder(Node<String> node) {
-		
-        if (node == null) return;
-  
-        //Recursive call to left child
-        printInorder(node.left);
-  
-        //Print data
-        System.out.print(node.data + " ");
-  
-        //Recursive call to right child
-        printInorder(node.right);
-    }
-
 }
