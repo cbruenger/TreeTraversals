@@ -4,14 +4,14 @@ import java.util.*;
 public class Traversals {
 	
 	//Function for printing the inOrder traversal
-	void printInOrder(Node<String> root) {
+	void printInOrder(Node<String> tree) {
 		
 		//Return if tree is empty
-		if (root == null) return;
+		if (tree == null) return;
         
         //A stack to save the path of inOrder traversal
         Stack<Node<String>> stack = new Stack<>();
-        Node<String> currentNode = root;
+        Node<String> currentNode = tree;
          
         //Add path from root to left-most node to the stack
         while (currentNode != null) {
