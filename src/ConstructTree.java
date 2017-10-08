@@ -1,25 +1,9 @@
 
 public class ConstructTree < T extends Comparable <T>> {
 	public ConstructTree() {}
-	//A variable representing the current index in the preOrder array for creating new nodes recursively
-	//static int preOrderIndex = 0;
 	
-	
-//	@SuppressWarnings("hiding")
-//	private class Node<T> { 
-//		
-//		private T data;
-//		private Node<T> left;
-//		private Node<T> right; 
-//			
-//		public Node (T data){
-//			this.data = data;
-//			this.left = null;
-//			this.right = null;
-//		}
-//		
-//	}
-	 Node<T> root;
+	//root node of the tree
+	 Node<T> root; 
 	
 	public void buildTree (T[] preOrder, T[] inOrder){
 		
@@ -41,24 +25,36 @@ public class ConstructTree < T extends Comparable <T>> {
 		
 		//Creates a new node containing the value in current index of of preOrder
 		T first = preOrder[preOrderStart];
+		
+		//finds where to separate the array into left/right trees
 		int location = assignInOrderIndex(inOrder, first);
 		int preOrderLocation = preOrderStart + (location - inOrderStart);
 		
+		//current node
 		Node<T> root = new Node<T>(first);
-		//Return the current node if it has no children
-		//if (inOrderStart == inOrderEnd) return newNode;
+		
+		// left side of tree  
+		
+		//preOrder array starts on left side 
 		int preOrderStartLeft = preOrderStart + 1;
+		//preOrder array ends
 		int preOrderEndLeft = preOrderLocation;
+		//inOrder array starts
 		int inOrderStartLeft = inOrderStart;
+		//splits location in half, left side is left side of tree
 		int inOrderEndLeft = location - 1;
 		
+		// right side of tree
+		
+		// right side preOrder begins
 		int preOrderStartRight = preOrderLocation + 1;
+		//preOrder right ends 
 		int preOrderEndRight = preOrderEnd;
+		// right side inOrder array is to the right of the location 
 		int inOrderStartRight = location + 1;
 		int inOrderEndRight = inOrderEnd;
 		
-		//Call the helper function to find the index in the inOrder array containing newNode.data
-		//int inOrderIndex = assignInOrderIndex(inOrder, first);
+		
 		
 		//Recursive calls to build left and right children of the current node
 		root.left = treeConstructor(preOrder, preOrderStartLeft, preOrderEndLeft, inOrder, inOrderStartLeft, inOrderEndLeft);

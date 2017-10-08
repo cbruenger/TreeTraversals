@@ -17,10 +17,7 @@ public class Main {
 		String inOrder[] = inOrderInput.split(" ");
 	
 		
-		//String in[] = new String[] {"2","5","6","10","12","14","15"};
-		//String pre[] = new String[] {"10","5","2","6","14","12","15"};
 		
-		//int len = inOrder.length;
 		
 		//Build the tree
 		tree.buildTree(preOrder, inOrder);
