@@ -1,0 +1,1 @@
+A program that takes the preorder and inorder traversal sequences, as arrays, and builds the corresponding binary tree. Implements the non-recursive inorder, preorder and postorder traversals of the binary tree and prints the tree.

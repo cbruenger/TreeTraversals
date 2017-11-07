@@ -9,7 +9,7 @@ public class Main {
 		System.out.println("Enter the preorder separated by spaces: ");
 		Scanner scanner = new Scanner(System.in);
 		String preOrderInput = scanner.nextLine();
-		System.out.println("Enter the inorder separated by commas: ");
+		System.out.println("Enter the inorder separated by spaces: ");
 		String inOrderInput = scanner.nextLine();
 		scanner.close();
 	
